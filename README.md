@@ -21,3 +21,22 @@ All code can be ran and figures saved by running
 make analysis
 ```
 Alternatively, one can run all notebooks individually and explore intermediate results along the way.
+
+## ANNSlabSolver
+The ANN code is implemented in a Python class called `ANNSlabSolver`, which is found in the file `ANNSlabSolver.py`.
+The user defines the problem parameters when instantiating an `ANNSlabSolver` object (see the class docstrings for all arguments).
+
+An example usage is:
+```python
+# Import the class
+from ann.ANNSlabSolver import ANNSlabSolver
+
+# Instantiate the class using default parameters
+solver = ANNSlabSolver()
+
+# Train the ANN
+solver.train()
+
+# Get an estimate of the scalar flux
+flux = solver.predict()
+```
